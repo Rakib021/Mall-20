@@ -68,9 +68,7 @@ client.connect((err) => {
   });
   
 
-  // app.delete(`/delete/:id`, (req, res) =>{
-  //   console.log(req);
-  // })
+  
 
 
   console.log("Products Database Connected Successfully");
@@ -100,7 +98,6 @@ client.connect((err) => {
 
 
   app.get('/orders', (req, res) =>{
-    // console.log(req.headers.authorization);
     ordersCollection.find({email: req.query.email})
     .toArray( (err, documents) =>{
       res.send(documents);
