@@ -1,7 +1,7 @@
 
 ### Hi there, I'm Rakib Ul Islam
 
-### Mall-20
+### Mall-20 Server
 This is an event management type website. It’s developed by React, MongoDB, Firebase, JS, ES6, React-Router, React-Hooks, React-custom-hook, Html, CSS and Material UI.
 
 
