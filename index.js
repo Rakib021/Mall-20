@@ -21,7 +21,7 @@ const MongoClient = require("mongodb").MongoClient;
 const ObjectID = require("mongodb").ObjectID;
 
 
-const serviceAccount = require('./shop-24-7-firebase-adminsdk-2tgiw-58e18b2645.json');
+const serviceAccount = require('./configs/mall-20-firebase-adminsdk-udzlf-f74ff0b45f.json');
 
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
@@ -47,7 +47,7 @@ client.connect((err) => {
   app.get("/products", (req, res) => {
     productsCollection.find().toArray((err, items) => {
       res.send(items);
-      // console.log("from database", items);
+     
     });
   });
 
@@ -108,7 +108,7 @@ client.connect((err) => {
 
 
 
-   console.log("Orders Database Connected Successfully");
+  
 });
 
 app.listen(process.env.PORT || port);
