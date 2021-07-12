@@ -30,8 +30,7 @@ admin.initializeApp({
 app.get("/", (req, res) => {
   res.send("Welcome to mall-20 server!");
 });
-
-const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.cpqmt.mongodb.net/${process.env.DB_NAME}?retryWrites=true&w=majority`;
+const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.gdbsx.mongodb.net/${process.env.DB_NAME}?retryWrites=true&w=majority`;
 
 const client = new MongoClient(uri, {
   useNewUrlParser: true,
@@ -72,7 +71,7 @@ client.connect((err) => {
   
 
 
-  console.log("Products Database Connected Successfully");
+  console.log("Products Data Connected Successfully");
 
   app.get("/products/:id", (req, res) => {
     const id = req.params.id;
